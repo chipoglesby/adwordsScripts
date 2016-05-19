@@ -6,7 +6,7 @@ function main(){
    report = AdWordsApp.report(
     'SELECT Criteria, CampaignName, AdGroupName, Clicks, Impressions, Cost, Conversions, QualityScore, SearchPredictedCtr, CreativeQualityScore, PostClickQualityScore, ConversionValue ' +
     'FROM   KEYWORDS_PERFORMANCE_REPORT ' +
-    'WHERE Status = ENABLED AND Impressions > 1 ' +
+    'WHERE Status = ENABLED AND Impressions > 0 ' +
     'DURING YESTERDAY');
    rows = report.rows();
   while (rows.hasNext()) {
